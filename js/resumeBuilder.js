@@ -52,13 +52,13 @@ var projects = {
       "title": "Message Board Database Design",
       "dates": "9/2016-Prsent",
       "description": "-Designed the model of a message board database with Entity-Relationship diagram. -Implemented the database design with SQL scripts in MySQL. -Implemented SQL queries for CRUD operations.",
-      "images": []
+      "images": ["images/green.jpg"]
     },
     {
       "title": "Portfolio Site",
       "dates": "8/2016-9/2016",
       "description": "-Created a website based on design mockup that displays images, descriptions and links to future portfolio projects. -All content is responsive and displays on all display sizes including desktop, mobiles and tablets. -Utilized a grid-based layout using self-written grid CSS.",
-      "images": []
+      "images": ["images/coral.jpg"]
     }
   ]
   //display: function
@@ -71,14 +71,16 @@ var education = {
       "location": "New York",
       "majors": ["Finance", ""],
       "degree": "Master of Science",
-      "dates": "9/2014-12/2015"
+      "dates": "9/2014-12/2015",
+      "url": "http://www.fordham.edu/"
     },
     {
       "name": "Shanghai University",
       "location": "Shanghai",
       "majors": ["Broadcasting and Film", ", Finance"],
       "degree": "Bachelor",
-      "dates": "9/2009-7/2014"
+      "dates": "9/2009-7/2014",
+      "url": "http://www.shu.edu.cn/"
     }
   ],
   "onlineCourses": [
@@ -86,13 +88,13 @@ var education = {
       "title": "Front-End Web Developer Nanodegree",
       "school": "Udacity",
       "dates": "6/2016-Present",
-      "url": " "
+      "url": "https://www.udacity.com/"
     },
     {
       "title": "Algorithms: Design and Analysis",
       "school": "Stanford University on Coursera",
       "dates": "6/2016-Present",
-      "url": " "
+      "url": "https://www.coursera.org/"
     }
   ]
   //display: function
@@ -179,7 +181,7 @@ projects.display();
 education.display = function() {
   education.schools.forEach(function(s){
     $("#education").append(HTMLschoolStart);
-    var formattedName = HTMLschoolName.replace("%data%", s.name);
+    var formattedName = HTMLschoolName.replace("%data%", s.name).replace("#", s.url);
     var formattedDegree = HTMLschoolDegree.replace("%data%", s.degree);
     var formattedNameDegree = formattedName + formattedDegree;
     $(".education-entry:last").append(formattedNameDegree);
@@ -197,7 +199,7 @@ education.display = function() {
   $("#education").append(HTMLonlineClasses);
   education.onlineCourses.forEach(function(o){
     $("#education").append(HTMLschoolStart);
-    var formattedTitle = HTMLonlineTitle.replace("%data%", o.title);
+    var formattedTitle = HTMLonlineTitle.replace("%data%", o.title).replace("#", o.url);
     var formattedSchool = HTMLonlineSchool.replace("%data%", o.school);
     var formattedTitleSchool = formattedTitle + formattedSchool;
     $(".education-entry:last").append(formattedTitleSchool);
@@ -205,7 +207,8 @@ education.display = function() {
     var formattedDates = HTMLonlineDates.replace("%data%", o.dates);
     $(".education-entry:last").append(formattedDates);
 
-    var formattedUrl = HTMLonlineURL.replace("%data%", o.url);
+    // Append this empty line to keep the format. URL is contained within formattedTitle.
+    var formattedUrl = HTMLonlineURL.replace("%data%", " ");
     $(".education-entry:last").append(formattedUrl);
   });
 };
