@@ -10,7 +10,7 @@ var bio = {
   "contacts": {
     "mobile": "+1(917)678-2067",
     "email": "hongzi.emma@gmail.com",
-    "github": "https://github.com/z-emma",
+    "github": "https://github.com/hongzizhu",
     "location": "Jersey City, NJ"
   },
   "biopic": "images/profilepic.jpg",
