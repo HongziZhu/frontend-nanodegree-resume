@@ -3,16 +3,16 @@ This is empty on purpose! Your code to build the resume will go here.
  */
 //resume info
 var bio = {
-    "name": "Emma Zhu",
+    "name": "Estella Zhu",
     "role": "Web Developer",
     "contacts": {
-        "mobile": "+1(917)678-2067",
-        "email": "hongzi.emma@gmail.com",
+        "mobile": "+1(234)567-8900",
+        "email": "estellazhu23@gmail.com",
         "github": "https://github.com/hongzizhu",
-        "location": "Jersey City, NJ"
+        "location": "New York, NY"
     },
     "biopic": "images/profilepic.jpg",
-    "skills": ["HTML", "CSS", "JavaScript", "Bootstrap", "Git", "SQL", "PHP"],
+    "skills": ["HTML", "CSS", "JavaScript", "Bootstrap", "Java", "SQL", "Git"],
     "welcomeMessage": "Welcome to my page!"
         //disply: function
 };
@@ -61,7 +61,7 @@ var education = {
         "location": "New York",
         "majors": ["Finance", ""],
         "degree": "Master of Science",
-        "dates": "9/2014-12/2015",
+        "dates": "9/2014-2/2016",
         "url": "http://www.fordham.edu/"
     }, {
         "name": "Shanghai University",
